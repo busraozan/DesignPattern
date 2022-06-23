@@ -7,8 +7,8 @@ public class TestDependencyInjection {
         try {
             String className = PATH + "Shape";
             //shape servis sınıfı gelen objeden soyutlanmış oldu, aradaki bağımlılık azaltıldı.
-            IComponent IComponent = (IComponent) Class.forName(className).newInstance();
-            IComponent.execute();
+            IComponent component = (IComponent) Class.forName(className).newInstance();
+            component.execute();
         }catch (ClassNotFoundException | InstantiationException | IllegalAccessException e){
             e.printStackTrace();
             System.out.println("Parametre olarak gelen değer için sınıf bulunamadı");
